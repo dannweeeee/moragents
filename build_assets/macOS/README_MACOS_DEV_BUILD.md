@@ -36,11 +36,11 @@ For Intel (x86_64)
  $  pyinstaller --windowed --add-data "resources:resources" --name="MORagents" --icon="images/moragents.icns" --osx-entitlements-file "build_assets/macOS/MORagents.entitlements" main.py
 ```
     # If you have issues, try
-    python -m PyInstaller --windowed --runtime-hook runtime_hook.py --name="MORagents" --icon="moragents.icns" main.py
+    python3 -m PyInstaller --windowed --runtime-hook runtime_hook_windows.py --name="MORagents" --icon="images/moragents.icns" main.py
 
 6. Install Application 
 ```shell
-  $ cp dist/MORagents.app /Applications
+  $ cp -R dist/MORagents.app /Applications
 ```
 
 7. Open the ```MORagents``` app on your Mac, Docker needs to be running before opening MORagents
